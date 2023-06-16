@@ -50,13 +50,17 @@
       margin-top: 20px;
     }
   </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="header">
-    <h1>CARTÓRIO FIRMAMENTO</h2>
-  </div>
+  <div id="topo">
+    <img src="./fotos/licenciamento.png" alt="" id="logo">
+    CARTÓRIO FIRMAMENTO
+</div><br><br>
   <div class="container">
-    <h2>Certidão de Nascimento</h2>
+    <div class="titulo">
+      <p id="titulo">CERTIDÃO DE NASCIMENTO</p>
+    </div>
     <form>
       <div class="form-group">
         <label for="nome">Nome:</label>
@@ -148,11 +152,20 @@
       <div class="form-group buttons">
 
       </div>
+      <div id="botoes">
+        <a href="./segundaTela.html"><div class="botao" id="btnVoltar" style="margin-left: 10%;">
+            Voltar
+        </div></a>
+        <div class="botao"  type="reset" style="margin-left: 3%;">
+            Limpar
+        </div> 
+        <div class="botao" onclick="salvar()" style="margin-left: 3%;">
+            Salvar
+        </div>         
+      </div>
+
     </form>
   </div>
-  <a href="./segundaTela.html"><button type="button">Voltar</button></a>
-  <button type="reset" >Limpar</button>
-  <button id="btn_salvar" onclick="salvar()">Salvar</button>
   <script src="./script.js"></script>
 </body>
 </html>

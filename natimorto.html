@@ -3,6 +3,25 @@
 <head>
   <title>Certidão de Nascimento</title>
   <style>
+    #topo{
+      background: #60D1E0;
+      position: absolute;
+      width: 100%;
+      height: 40px;
+      left: 0px;
+      top: 0px;
+      font-size: 30px;
+      display: flex;
+      align-items: center;
+    }
+
+    #logo{
+      margin-left: 25px;
+      margin-right: 10px;
+      width: 35px;
+      height: 35px;
+    }
+
     body {
       font-family: Arial, sans-serif;
     }
@@ -60,13 +79,17 @@
       cursor: pointer;
     }
   </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="header">
-    <h1 style="font-size: 18px;">CARTÓRIO FIRMAMENTO</h1>
-  </div>
+  <div id="topo">
+    <img src="./fotos/licenciamento.png" alt="" id="logo">
+    CARTÓRIO FIRMAMENTO
+</div><br><br>
   <div class="container">
-    <h2>Certidão de Natimorto</h2>
+    <div class="titulo">
+      <p id="titulo">CERTIDÃO DE NATIMORTO</p>
+    </div>
     <form>
       <div class="form-group">
         <label for="matricula">Matrícula:</label>
@@ -76,11 +99,18 @@
         <label for="averbacoes">Averbações/Anotações a Acrescer:</label>
         <textarea id="averbacoes" name="averbacoes"></textarea>
       </div>
-      <div class="form-group buttons">
-        <a href="./segundaTela.html"><button type="button">Voltar</button></a>
-        <button type="reset" onclick="naoFunciona()">Limpar</button>
-        <button type="submit" onclick="naoFunciona()">Pesquisar</button>
-      </div>
+      
+      <div id="botoes">
+        <a href="./segundaTela.html"><div class="botao" id="btnVoltar" style="margin-left: 10%;">
+            Voltar
+        </div></a>
+        <div class="botao"  onclick="naoFunciona()" style="margin-left: 3%;">
+            Limpar
+        </div> 
+        <div class="botao" onclick="naoFunciona()" style="margin-left: 3%;">
+            Pesquisar
+        </div>         
+    </div>
     </form>
 
   </div>
